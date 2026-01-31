@@ -17,8 +17,8 @@ with (globalmanager) {
     playerskinmap[10]=ds_map_create()
     playerskinmap[11]=ds_map_create()
 
-    skindir=global.workdir+"SnackBowl_skins\"
-    moddir=global.workdir+"SnackBowl_mods\"
+    skindir=global.workdir+global.skindir
+    moddir=global.workdir+global.moddir
 
     directory_create(skindir)
     directory_create(moddir)

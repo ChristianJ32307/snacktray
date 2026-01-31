@@ -1,4 +1,67 @@
+//set up game directories
+global.workdir=working_directory+"\"
+global.tempdir=temp_directory+"\"
+
 readme_modding()
+
+i=0
+repeat (parameter_count()) {
+    switch (parameter_string(i)) {
+        case "-datadir":
+            j=0
+            repeat (parameter_count()) {
+                moddatastore=global.moddata
+                global.moddata=unreal(parameter_string(i+1),moddatastore)
+                j+=1
+            }
+
+            break
+
+        case "-savedir":
+            j=0
+            repeat (parameter_count()) {
+                savedirstore=global.savedir
+                global.savedir=global.workdir+unreal(parameter_string(i+1),savedirstore)
+                j+=1
+            }
+
+            break
+
+        case "-crashdir":
+            j=0
+            repeat (parameter_count()) {
+                crashdirstore=global.crashdir
+                global.crashdir=unreal(parameter_string(i+1),crashdirstore)
+                j+=1
+            }
+
+            break
+
+        case "-skindir":
+            j=0
+            repeat (parameter_count()) {
+                skindirstore=global.skindir
+                global.skindir=global.workdir+unreal(parameter_string(i+1),skindirstore)
+                j+=1
+            }
+
+            break
+
+        case "-moddir":
+            j=0
+            repeat (parameter_count()) {
+                moddirstore=global.moddir
+                global.moddir=global.workdir+unreal(parameter_string(i+1),moddirstore)
+                j+=1
+            }
+
+            break
+
+        default:
+            break
+    }
+    i+=1
+}
 
 sureface_init()
 
