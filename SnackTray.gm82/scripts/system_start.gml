@@ -1,9 +1,11 @@
+//set up game directories and caches
 
-/*global.savedir is now in readme_modding*/
+global.workdir=working_directory+"\"
+global.tempdir=temp_directory+"\"
+
+global.savedir=global.workdir+"SnackBowl_save\"
 directory_create(global.savedir)
 clearbuffer()
-
-//set up game directories and caches
 
 if (global.modded) {
     //generate adler32 checksum of username to use as save file

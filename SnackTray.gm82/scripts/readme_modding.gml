@@ -28,10 +28,6 @@ global.modded=true
 //you can also pick a different folder other than "data" if your mod is
 //incompatible with the base assets. mind the backslash.
 global.moddata="SnackBowl_data\"
-global.savedir="SnackBowl_save\"
-global.crashdir="SnackBowl_crashes\"
-global.skindir="SnackBowl_skins\"
-global.moddir="SnackBowl_mods\"
 
 //allows the 'run' command to be used in the console
 global.developer=true
